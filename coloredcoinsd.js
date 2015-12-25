@@ -72,7 +72,7 @@ Coloredcoinsd.prototype.getStakeHolders = function (assetId, numConfirmations, c
 Coloredcoinsd.prototype.getAssetMetadata = function (assetId, utxo, cb) {
   if (typeof utxo === 'function') {
     cb = utxo
-    utxo = 0
+    utxo = ""
   }
   request.get(this.coluHost + '/coloredcoins?func=assetmetadata&assetId=' + assetId + '&utxo=' + utxo, handleResponse(cb))
 }
